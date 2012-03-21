@@ -3,6 +3,8 @@
 
 #include <uapi/linux/stddef.h>
 
+#ifdef __KERNEL__
+
 #undef NULL
 #define NULL ((void *)0)
 
