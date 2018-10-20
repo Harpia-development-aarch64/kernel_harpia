@@ -624,7 +624,6 @@ static void context_free(struct smq_invoke_ctx *ctx, int remove)
 	int ssrcount = ctx->fdata->ssrcount;
 	struct fastrpc_smmu *smmu = &apps->channel[cid].smmu;
 	struct fastrpc_buf *b;
-	struct fastrpc_apps *me = &gfa;
 	int i, bufs;
 	if (ctx->smmu) {
 		bufs = REMOTE_SCALARS_INBUFS(ctx->sc) +
