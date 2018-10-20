@@ -4,7 +4,7 @@
 #include <uapi/linux/stddef.h>
 
 #undef NULL
-#define NULL 0
+#define NULL ((void *)0)
 
 enum {
 	false	= 0,
