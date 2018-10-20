@@ -982,6 +982,19 @@ static int put_v4l2_subdev_edid32(struct v4l2_subdev_edid __user *kp, struct v4l
 
 static long do_video_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
 {
+	union {
+		struct v4l2_format v2f;
+		struct v4l2_buffer v2b;
+		struct v4l2_framebuffer v2fb;
+		struct v4l2_input v2i;
+		struct v4l2_standard v2s;
+		struct v4l2_ext_controls v2ecs;
+		struct v4l2_event v2ev;
+		struct v4l2_create_buffers v2crt;
+		struct v4l2_subdev_edid v2edid;
+		unsigned long vx;
+		int vi;
+	} karg;
 	void __user *up = compat_ptr(arg);
 	void __user *up_native = NULL;
 	void __user *aux_buf;
