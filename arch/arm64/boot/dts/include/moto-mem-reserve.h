@@ -13,7 +13,7 @@
 #ifndef __MOTO_MEM_RESERVE_H
 #define __MOTO_MEM_RESERVE_H
 
-#define WDOG_CPUCTX_SIZE_PERCPU	0x5800 /* sizeof(struct msm_wdog_cpuctx) */
+#define WDOG_CPUCTX_SIZE_PERCPU	0x3400	/* sizeof(struct msm_wdog_cpuctx) */
 #define WDOG_CPUCTX_SIZE_4CPUS	(WDOG_CPUCTX_SIZE_PERCPU * 4)
 #define WDOG_CPUCTX_SIZE_6CPUS	(WDOG_CPUCTX_SIZE_PERCPU * 6)
 #define WDOG_CPUCTX_SIZE_8CPUS	(WDOG_CPUCTX_SIZE_PERCPU * 8)
